@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>transform</title>
+        <style type="text/css">
+            .trans {
+                position: relative;
+                width: 100px;
+                height: 100px;
+            }
+
+            .trans:after,.trans:before {
+                position: absolute;
+                content: " ";
+                left: 0;
+                bottom: 4px;
+                left: 0;
+                height: 1.5px;
+                width: 16px;
+                background-color: #000;
+                z-index: 11;
+                transform: rotate(-55deg);
+            }
+            .trans:before {
+                transform: rotate(-125deg);
+            }
+        </style>
+    </head>
+    <body>
+
+           <div class="trans">
+
+           </div>
+
+    </body>
+</html>

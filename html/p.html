@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>p基本属性</title>
+    <style type="text/css">
+        .div-out {
+          background-color: yellow;
+          position: relative;
+        }
+        .p-cls{
+          background-color: red;
+        }
+
+        .div-out:before{
+          content: " ";
+          display: table;
+        }
+        .div-out:after{
+          content: " ";
+          display: table;
+          clear:both;
+        }
+    </style>
+  </head>
+  <body>
+      <div class="div-out">
+        <p class="p-cls">我是一个P标签,我有默认属性offsetTop:<span id="marginTop"></span> offsetLeft：<span id="marginLeft"></span></p>
+      </div>
+  </body>
+  <script type="text/javascript">
+        document.getElementById("marginTop").innerText = document.getElementsByClassName('p-cls')[0].offsetTop + " ";
+        //document.getElementById("marginRight").innerText = document.getElementsByClassName('p-cls')[0].offset + " ";
+        //document.getElementById("marginBottom").innerText = document.getElementsByClassName('p-cls')[0].offsetBottom + " ";
+        document.getElementById("marginLeft").innerText = document.getElementsByClassName('p-cls')[0].offsetLeft;
+  </script>
+</html>
